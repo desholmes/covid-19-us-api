@@ -20,12 +20,12 @@ The following starts a local server running on port 8000:
 docker run -it -p 8000:8000 desholmes/covid-19-us-api:1.0.0
 ```
 
-| URL | Description |
-| --- | --- |
-| [us/counties/](http://0.0.0.0:8000/us/counties/) | Returns all county-level data: date, county, state, fips, cases, deaths |
-| [us/counties/?date=2020-03-20](http://0.0.0.0:8000/us/counties/) | Returns all county-level data for a `date`: date, county, state, fips, cases, deaths |
-| [us/states/](http://0.0.0.0:8000/us/state/) | Returns all state-level data: date, county, state, fips, cases, deaths |
-| [us/states/?date=2020-03-20](http://0.0.0.0:8000/us/state/) | Returns all state-level data for a `date`: date, county, state, fips, cases, deaths |
+| URL | Description | Hosted Link | Local Link |
+| --- | --- | --- | --- |
+| /us/counties/ | Returns county-level data: date, county, state, fips, cases, deaths | [hosted](https://covid-19-us-api.dholmes.co.uk/us/counties/) | [local](http://0.0.0.0:8000/us/counties/) |
+| /us/counties/?date=2020-03-20 | Returns county-level data for a `date`: date, county, state, fips, cases, deaths | [hosted](https://covid-19-us-api.dholmes.co.uk/us/counties/?date=2020-03-20) | [local](http://0.0.0.0:8000/us/counties/?date=2020-03-20) |
+| /us/states/ | Returns state-level data: date, county, state, fips, cases, deaths | [hosted](https://covid-19-us-api.dholmes.co.uk/us/states/) | [local](http://0.0.0.0:8000/us/states/) |
+| /us/states/?date=2020-03-20 | Returns  state-level data for a `date`: date, county, state, fips, cases, deaths | [hosted](https://covid-19-us-api.dholmes.co.uk/us/states/?date=2020-03-20) |[local](http://0.0.0.0:8000/us/states/?date=2020-03-20) |
 
 ## Getting Started (Development)
 
