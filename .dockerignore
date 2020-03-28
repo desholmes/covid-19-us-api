@@ -1,0 +1,6 @@
+venv
+.vscode
+.env*
+.flake8
+Makefile
+README.md
