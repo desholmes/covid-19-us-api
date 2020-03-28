@@ -12,6 +12,8 @@ A REST API for the US COVID-19 data gathered by [nytimes](https://github.com/nyt
 
 ## Using the API
 
+A hosted version version of the API can be found at [covid-19-us-api.dholmes.co.uk](https://covid-19-us-api.dholmes.co.uk).
+
 The following starts a local server running on port 8000:
 
 ```bash
