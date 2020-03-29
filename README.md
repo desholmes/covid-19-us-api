@@ -8,7 +8,7 @@ A REST API for the US COVID-19 data gathered by [nytimes](https://github.com/nyt
 
 * Registry: desholmes
 * Repository name: covid-19-us-api
-* Current version: 1.0.2
+* Current version: 1.0.3
 
 ## Using the API
 
@@ -72,6 +72,7 @@ If you want to configure the application step-by-step follow the steps below:
 
 ## Version History
 
+1. `1.0.3`: Adding GNU GENERAL PUBLIC V3 LICENSE and CORS headers
 1. `1.0.2`: Added caching for response dataframes
 1. `1.0.1`: Added a hosted public version of the API
 1. `1.0.0`: Base repo with DBless Django app
