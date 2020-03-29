@@ -1,10 +1,23 @@
 import pandas as pd
+from django.core.cache import caches
+
+
+def url_to_key(url):
+    key = url.replace('https://raw.githubusercontent.com/', '')
+    return key.replace('/', '_')
 
 
 def get_df_from_url(url):
-    # TODO add checking and fallback to ./data
-    df = pd.read_csv(url)
-    return df.fillna(method='ffill')
+    cache_key = url_to_key(url)
+    cached_df = caches['default'].get(cache_key)
+
+    if cached_df is None:
+        df = pd.read_csv(url)
+        df = df.fillna(-1)
+        caches['default'].set(cache_key, df, 3600)  # 1hr
+        cached_df = df
+
+    return cached_df
 
 
 def get_states_from_df(df):

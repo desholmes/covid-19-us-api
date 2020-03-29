@@ -3,7 +3,6 @@ FROM python:3.7.6-slim
 WORKDIR /usr/src
 
 COPY covid_19_us/ ./covid_19_us
-COPY data/ ./data
 COPY manage.py .
 COPY gunicorn.py .
 COPY requirements.txt .
