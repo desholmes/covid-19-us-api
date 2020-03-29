@@ -40,7 +40,6 @@ run:
 	-e QA=$(QA) \
 	-p $(PORT):$(PORT) \
 	-v $(PWD)/covid_19_us:/usr/src/covid_19_us \
-	-v $(PWD)/data:/usr/src/data \
 		$(REGISTRY)/$(REPOSITORY):$(VERSION)
 
 run-prod:
