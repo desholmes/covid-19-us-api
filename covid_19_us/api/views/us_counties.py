@@ -24,6 +24,5 @@ class USCountyViewSet(viewsets.ViewSet):
         except ValueError:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
         serializer = CountySerializer(instance=counties.values(), many=True)
         return Response(serializer.data)

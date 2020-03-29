@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1',
                  'localhost', 'covid-19-us-api.dholmes.co.uk']
 
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,11 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd parties
     'rest_framework',
+    'corsheaders',
     # Application
     'covid_19_us.api',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,7 +81,6 @@ CACHES = {
     }
 }
 
-
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
     'UNAUTHENTICATED_USER': None,
@@ -90,7 +93,6 @@ REST_FRAMEWORK = {
 }
 
 WSGI_APPLICATION = 'covid_19_us.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
