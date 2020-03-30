@@ -16,7 +16,10 @@ def gq_middleware(get_response):
             if request.headers['User-Agent']:
                 visitor.user_agent = request.headers['User-Agent']
             session = Session()
-            page = Page(request.path)
+            path = request.path
+            if request.META.get('QUERY_STRING'):
+                path = f"{request.path}?{request.META.get('QUERY_STRING')}"
+            page = Page(path)
             page.title = request.path
             tracker.track_pageview(page, session, visitor)
 
