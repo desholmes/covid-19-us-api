@@ -8,7 +8,7 @@ A REST API for the US COVID-19 data gathered by [nytimes](https://github.com/nyt
 
 * Registry: desholmes
 * Repository name: covid-19-us-api
-* Current version: 1.0.4
+* Current version: 1.0.5
 
 ## Using the API
 
@@ -73,6 +73,7 @@ If you want to configure the application step-by-step follow the steps below:
 
 ## Version History
 
+1. `1.0.5`: Hotfix to handle query string for GA tracking
 1. `1.0.4`: Adding GA tracking to monitor hosted API usage
 1. `1.0.3`: Adding GNU GENERAL PUBLIC V3 LICENSE and CORS Allow all headers
 1. `1.0.2`: Added caching for response dataframes
