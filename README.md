@@ -8,7 +8,7 @@ A REST API for the US COVID-19 data gathered by [nytimes](https://github.com/nyt
 
 * Registry: desholmes
 * Repository name: covid-19-us-api
-* Current version: 1.0.3
+* Current version: 1.0.4
 
 ## Using the API
 
@@ -69,10 +69,12 @@ If you want to configure the application step-by-step follow the steps below:
 
 * [nytimes](https://github.com/nytimes/covid-19-data) for providing the data
 * [Xavier Ordoquy (xordoquy)](https://medium.com/django-rest-framework/django-rest-framework-viewset-when-you-don-t-have-a-model-335a0490ba6f) and his [demo code](https://github.com/linovia/drf-demo) for creating a non-model Django REST API
+* [Valentino Gagliardi's middleware blog post](https://www.valentinog.com/blog/django-middleware/)
 
 ## Version History
 
-1. `1.0.3`: Adding GNU GENERAL PUBLIC V3 LICENSE and CORS headers
+1. `1.0.4`: Adding GA tracking to monitor hosted API usage
+1. `1.0.3`: Adding GNU GENERAL PUBLIC V3 LICENSE and CORS Allow all headers
 1. `1.0.2`: Added caching for response dataframes
 1. `1.0.1`: Added a hosted public version of the API
 1. `1.0.0`: Base repo with DBless Django app

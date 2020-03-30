@@ -35,6 +35,11 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1',
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+if os.environ.get("GA_ID") is None:
+    GA_ID = False
+else:
+    GA_ID = os.environ.get("GA_ID")
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'covid_19_us.api.ga.gq_middleware',
 ]
 
 ROOT_URLCONF = 'covid_19_us.urls'
@@ -103,7 +109,6 @@ DATABASES = {
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
